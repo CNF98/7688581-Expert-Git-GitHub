@@ -52,9 +52,62 @@ Voici les étapes à suivre pour avoir un environnement de développement et de 
 
 ```
 A définir
+
+Pour avoir un environnement de développement et de test opérationnel, vous pouvez suivre les étapes suivantes :
+
+1. Installer un éditeur de code : Choisissez un éditeur de code adapté à vos besoins. Certains éditeurs populaires sont Visual Studio Code, Sublime Text, Atom, ou PyCharm. Téléchargez et installez l'éditeur de code de votre choix à partir de son site officiel.
+
+2. Installer Python : Assurez-vous d'avoir Python installé sur votre système. Téléchargez la dernière version stable de Python depuis le site officiel de Python (https://www.python.org) et suivez les instructions d'installation pour votre système d'exploitation.
+
+3. Configurer un environnement virtuel : Il est recommandé d'utiliser un environnement virtuel pour isoler les dépendances de votre projet. Créez un nouvel environnement virtuel en utilisant l'outil venv intégré à Python. Ouvrez un terminal et exécutez les commandes suivantes :
+
+   - Sur Windows :
+
+     ```
+     python -m venv mon_environnement
+     mon_environnement\Scripts\activate
+     ```
+
+   - Sur macOS/Linux :
+
+     ```
+     python3 -m venv mon_environnement
+     source mon_environnement/bin/activate
+     ```
+
+4. Cloner le projet : Utilisez Git pour cloner le dépôt du projet sur votre machine locale. Accédez au répertoire où vous souhaitez stocker le projet, puis exécutez la commande suivante dans votre terminal :
+
+   ```
+   git clone https://github.com/nom_du_depot/mon_projet.git
+   ```
+
+5. Installer les dépendances : Accédez au répertoire du projet cloné et installez les dépendances requises en utilisant l'outil de gestion de paquets pip. Exécutez la commande suivante dans votre terminal :
+
+   ```
+   cd mon_projet
+   pip install -r requirements.txt
+   ```
+
+   Assurez-vous d'avoir un fichier `requirements.txt` qui répertorie toutes les dépendances nécessaires au projet.
+
+6. Configurer les fichiers de configuration : Vérifiez si votre projet nécessite des fichiers de configuration spécifiques, tels que des fichiers d'environnement (`.env`) ou des fichiers de configuration de base de données. Assurez-vous de configurer correctement ces fichiers en fonction de vos besoins.
+
+7. Effectuer les migrations de base de données : Si votre projet utilise une base de données, exécutez les migrations pour créer les tables nécessaires. Utilisez la commande suivante dans votre terminal :
+
+   ```
+   python manage.py migrate
+   ```
+
+8. Lancer l'application en mode de développement : Pour exécuter l'application en mode de développement, utilisez la commande suivante dans votre terminal :
+
+   ```
+   python manage.py runserver
+   ```
+
+   Cela lancera un serveur de développement local, et vous pourrez accéder à votre application dans votre navigateur en visitant l'URL `http://localhost:8000`.
+
+Ces étapes vous permettront de mettre en place un environnement de développement et de test opérationnel pour votre projet. N'oubliez pas de consulter la documentation spécifique de votre projet pour des instructions détaillées et pour vérifier si des étapes supplémentaires sont nécessaires en fonction de ses exigences.
 ```
-
-
 
 ## Executer les tests
 
